@@ -9,20 +9,20 @@
         :root {
             --bg-main: #07070a;
             --card-bg: #07070c;
-            --border-color: #2d2d10; /* اللون الأساسي الجديد */
-            --text-gold: #d4af37;    /* اللون الذهبي الجديد */
+            --border-color: #2d2d10; /* اللون الزيتي الداكن للحدود */
+            --text-gold: #d4af37;    /* اللون الذهبي الملكي للنصوص */
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg-main); color: #fff; line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1050px; margin: auto; padding: 20px; }
         .banner-wrapper { position: relative; display: flex; justify-content: center; margin-bottom: 75px; }
-        .server-banner { width: 100%; height: 260px; background: url('https://cdn.discordapp.com/attachments/1472347009674383492/1486598819977105438/6_20260325201657.png?ex=69c6168a&is=69c4c50a&hm=1f50bc3a3bb4558f3d5794adc9ea5a64072fed1820a25c82c94f920152048f0c&') center/cover; border-radius: 20px; border: 1px solid var(--text-gold); }
+        .server-banner { width: 100%; height: 260px; background: url('https://cdn.discordapp.com/banners/1331682748372488243/49d3af0028344ad3f13c6b66bbaf2b40.webp?size=1024') center/cover; border-radius: 20px; border: 1px solid var(--text-gold); }
         .logo-main { position: absolute; bottom: -55px; width: 120px; height: 120px; border-radius: 50%; border: 4px solid #12151d; background: #12151d; }
         header { text-align: center; margin-bottom: 35px; }
         header h1 { font-size: 2.5rem; color: var(--text-gold); margin-bottom: 5px; }
         .tabs-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 35px; direction: ltr; }
         .tab-btn { background: #1a1e26; border: 1px solid var(--border-color); color: #999; padding: 10px 18px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.2s; display: flex; align-items: center; gap: 8px; }
-        .tab-btn.active { background: var(--text-gold); color: #000; border-color: var(--text-gold); } /* النص صار أسود هنا ليوضح مع الذهبي */
+        .tab-btn.active { background: var(--text-gold); color: #000; border-color: var(--text-gold); }
         .tab-content { display: none; }
         
         .tab-content.active { display: block; animation: smoothContentFade 0.5s ease-out forwards; }
@@ -47,26 +47,14 @@
         .copy-card:hover { border-color: var(--text-gold); background: #0d0f14; }
         .copy-card strong { display: block; color: var(--text-gold); font-size: 1.1rem; margin-top: 5px; }
         
-        .step-box { background: rgba(212, 175, 55, 0.05); padding: 20px; border-radius: 15px; border-right: 4px solid var(--text-gold); margin-bottom: 25px; }
+        .step-box { background: rgba(212, 175, 55, 0.08); padding: 20px; border-radius: 15px; border-right: 4px solid var(--text-gold); margin-bottom: 25px; }
         .step-box h3 { color: var(--text-gold); font-size: 1.1rem; margin-bottom: 10px; }
         .step-box p { color: #ccc; font-size: 0.9rem; }
         .dl-btn { flex: 1; min-width: 220px; text-decoration: none; padding: 16px; border-radius: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; color: #fff; background: #1a1e26; border: 1px solid #333; transition: 0.3s; }
         .dl-btn:hover { border-color: var(--text-gold); transform: translateY(-3px); box-shadow: 0 5px 10px rgba(212, 175, 55, 0.2); }
         
         .rules-list { list-style: none; counter-reset: rule-counter; }
-        .rules-list li { 
-            padding: 12px 15px; 
-            background: rgba(255,255,255,0.02); 
-            margin-bottom: 10px; 
-            border-radius: 12px; 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            font-size: 0.95rem; 
-            border: 1px solid rgba(255,255,255,0.05); 
-            position: relative; 
-            overflow: hidden; 
-        }
+        .rules-list li { padding: 12px 15px; background: rgba(255,255,255,0.02); margin-bottom: 10px; border-radius: 12px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; }
         
         .tab-content.active .rules-list li::after {
             content: '';
@@ -95,10 +83,8 @@
         
         .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
         .soc-btn { text-decoration: none; padding: 18px; border-radius: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 12px; transition: 0.4s; }
-        .btn-discord { background: #5865F2; color: #fff; } /* خليت الديسكورد بلونه عشان البراند */
-        .btn-discord:hover { box-shadow: 0 0 20px #5865F2; transform: translateY(-3px); }
+        .btn-discord { background: #5865F2; color: #fff; }
         .btn-tiktok { background: #fff; color: #000; }
-        .btn-tiktok:hover { box-shadow: 0 0 20px #ccc; transform: translateY(-3px); }
         
         .progress-box { background: #090b0f; padding: 25px; border-radius: 20px; border: 1px solid var(--border-color); }
         .bar-bg { width: 100%; height: 30px; background: #1a1a24; border-radius: 50px; overflow: hidden; margin: 15px 0; border: 1px solid #333; }
@@ -114,7 +100,7 @@
     <div class="container">
         <div class="banner-wrapper">
             <div class="server-banner"></div>
-            <img src="https://cdn.discordapp.com/attachments/1472347009674383492/1486231245984628829/5_20260324113550.png?ex=69c4c035&is=69c36eb5&hm=5bd14333ee0f9e2e8d96631606261323ae3376a972978c7235a6efac31e6454c&" class="logo-main">
+            <img src="https://cdn.discordapp.com/icons/1331682748372488243/27cb0faccfbafe63dd4ea954dcc80513.webp?size=1024" class="logo-main">
         </div>
         <header>
             <h1><i class="fas fa-shield-halved"></i> 𝗦𝗧𝗥 𝗖𝗢ММ𝗨ΝΙ𝗧Y</h1>
@@ -134,11 +120,13 @@
                 <h2><i class="fas fa-star"></i> تعريف السيرفر</h2>
                 <div class="story-box">
                     <h3>القصة والبداية: لسنا مجرد سيرفر، نحن تجربة لا تنكسر!</h3>
-                    <p>تأسس كياننا في عام 2023 برؤية واضحة: بناء مجتمع يجمع الأصدقاء تحت سقف واحد من المتعة والضحك.</p>
+                    <p>تأسس كياننا في عام 2023 برؤية واضحة: بناء مجتمع يجمع الأصدقاء تحت سقف واحد من المتعة والضحك. مررنا بتحديات لم يمر بها غيرنا، واجهنا 3 محاولات اختراق وتخريب، وفي كل مرة كان يظن البعض أنها النهاية، كنا نعود أقوى، أنظم، وأكبر.</p>
                 </div>
                 <div class="features-grid">
                     <div class="feat-card"><i class="fas fa-comments"></i><h3>Social (Hub)</h3><p>شات متفاعل 24/7، بعيد عن الرسميات وبدون نفسيات.</p></div>
                     <div class="feat-card"><i class="fas fa-star"></i><h3>Events</h3><p>جدول فعاليات أسبوعي يكسر الروتين بمسابقات وجوائز.</p></div>
+                    <div class="feat-card"><i class="fas fa-cubes"></i><h3>Minecraft</h3><p>بيئة لعب ممتعة (Survival) تركز على التعاون والإبداع.</p></div>
+                    <div class="feat-card"><i class="fas fa-headset"></i><h3>Staff Support</h3><p>طاقم إداري متواجد لخدمتكم، وحل مشاكلكم بأسرع وقت ممكن.</p></div>
                 </div>
             </div>
 
@@ -146,19 +134,25 @@
                 <h2><i class="fas fa-crown"></i> Server Management</h2>
                 <div class="staff-grid">
                     <a href="https://discord.com/users/944053364323405914" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/944053364323405914/73bc30883d61ed7bc6a000b9c3ca375d.webp"><h3>Sanji</h3><div class="rank">Owner Ship</div></a>
-                    <a href="https://discord.com/users/984241144462462986" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/attachments/1472347009674383492/1486344837975375973/77c232ad6ffda096a6ce44feec87ac68.gif"><h3>Madin</h3><div class="rank">Team Leader</div></a>
+                    <a href="https://discord.com/users/1134505693861388338" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1134505693861388338/f4a8d73d777cc5e1faf21d912a23efe0.webp"><h3>Baki</h3><div class="rank">Owner</div></a>
+                    <a href="https://discord.com/users/1190396076222587002" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1190396076222587002/faadabf1a6b0a9dfc7b1dd55ca55b0c9.webp"><h3>Mustafa</h3><div class="rank">Co Owner</div></a>
                 </div>
-            </div>
-        </div>
-
-        <div id="Rules" class="tab-content">
-            <div class="section fade-in">
-                <h2><i class="fas fa-scroll"></i> قوانين السيرفر</h2>
-                <ul class="rules-list">
-                    <li><i class="fas fa-gavel" style="color:var(--text-gold)"></i> ¹- إحـتـرام الأعـضـاء والإدارة</li>
-                    <li><i class="fas fa-ban" style="color:var(--text-gold)"></i> ²- مـمـنـوع الـسـب و الـشـتـم</li>
-                    <li><i class="fa-solid fa-shield-halved" style="color:var(--text-gold) !important;"></i> ¹⁰- مـشـاكـل الـخـاص لـيـس لـنـا عـلاقـة بـهـا</li>
-                </ul>
+                <h2 style="margin-top:30px;"><i class="fas fa-user-shield"></i> Staff Management</h2>
+                <div class="staff-grid">
+                    <a href="https://discord.com/users/1301649715577749556" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1301649715577749556/531ca8e0c8b77f92dcd077ebcc6807e8.webp?size=1024"><h3>Woel</h3><div class="rank">King Ship</div></a>
+                    <a href="https://discord.com/users/984241144462462986" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/attachments/1472347009674383492/1486602745430671492/77c232ad6ffda096a6ce44feec87ac68.gif?ex=69c61a32&is=69c4c8b2&hm=f3b020697dbe662d341047f7896b65e267dd36bdf55fd38dc055ddd1c7079849&"><h3>Madin</h3><div class="rank">Team Leader</div></a>
+                    <a href="https://discord.com/users/839876110794752030" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/839876110794752030/335fe5a47db89676efeb9a4d91ee1296.webp?size=1024"><h3>Svelom</h3><div class="rank">Master</div></a>
+                    <a href="https://discord.com/users/1369783861285752872" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1369783861285752872/8b21c957539ba3464e3d4f88b122c1f1.webp?size=1024"><h3>SZ6V</h3><div class="rank">Admin</div></a>
+                </div>
+                <h2 style="margin-top:40px; color:var(--text-gold);"><i class="fas fa-users-cog"></i> Staff Server</h2>
+                <div class="staff-grid" style="margin-top:20px;">
+                    <a href="https://discord.com/users/1288259374459916318" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1288259374459916318/a_54a526eff4f3e5d4b94b936afe6d71a1.gif"><h3>Skoda</h3><div class="rank">Modtoria</div></a>
+                    <a href="https://discord.com/users/1391811137628143627" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1391811137628143627/8be5f299509bc8ccbf31ae4a6824972e.webp"><h3>Mod</h3><div class="rank">Modtoria</div></a>
+                    <a href="https://discord.com/users/1424789769711255757" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1424789769711255757/a4dd97fb02fda52efa9655fe2e1313c8.webp"><h3>Al3mPain</h3><div class="rank">Modtoria</div></a>
+                    <a href="https://discord.com/users/1224671558161797172" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1224671558161797172/e4e8eab4153e641ad661d6226bff1651.webp"><h3>FR3</h3><div class="rank">Modtoria</div></a>
+                    <a href="https://discord.com/users/920250376660344842" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/920250376660344842/b8fbbbf8e8941997c5842453f13ebc22.webp"><h3>A7med</h3><div class="rank">Modtoria</div></a>
+                    <a href="https://discord.com/users/998965554914267170" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/998965554914267170/143b285a14706c5c1025ac6986559d8c.webp"><h3>Moga</h3><div class="rank">Super Staff</div></a>
+                </div>
             </div>
         </div>
 
@@ -169,9 +163,70 @@
                     <div class="copy-card" onclick="copyText('Str_Fantasy.aternos.me')"><i class="fas fa-copy"></i> انقر لنسخ IP<strong>Str_Fantasy.aternos.me</strong></div>
                     <div class="copy-card" onclick="copyText('17325')"><i class="fas fa-hashtag"></i> انقر لنسخ Port<strong>17325</strong></div>
                 </div>
+                <div class="step-box">
+                    <h3><i class="fas fa-gamepad"></i> طريقة الإضافة والدخول</h3>
+                    <p>1. افتح لعبة ماينكرافت واضغط على Play.<br>2. اختر قسم Servers ثم اضغط على Add Server.<br>3. ضع الآي بي والبورت المنسوخين أعلاه ثم اضغط Save ودخول!</p>
+                </div>
+                <h2><i class="fas fa-download"></i> روابط التحميل</h2>
+                <div class="copy-grid">
+                    <a href="https://cdn.discordapp.com/attachments/1439997431524753479/1475885243226656989/minecraft-1-26-0-02-xbox-compressed.apk" target="_blank" class="dl-btn"><i class="fab fa-android"></i> النسخة العادية</a>
+                    <a href="https://www.mediafire.com/file/9dhf6wsg0xmwyfc/Patch_1.26.02_Arm64_32.apk/file" target="_blank" class="dl-btn"><i class="fas fa-tools"></i> نسخة الباتش</a>
+                </div>
             </div>
         </div>
+
+        <div id="Rules" class="tab-content">
+            <div class="section fade-in">
+                <h2><i class="fas fa-scroll"></i> قوانين السيرفر</h2>
+                <ul class="rules-list">
+                    <li><i class="fas fa-gavel" style="color:var(--text-gold)"></i> ¹- إحـتـرام الأعـضـاء والإدارة</li>
+                    <li><i class="fas fa-ban" style="color:var(--text-gold)"></i> ²- مـمـنـوع الـسـب و الـشـتـم</li>
+                    <li><i class="fas fa-mosque" style="color:var(--text-gold)"></i> ³- عـدم الـتـحـدث عـن الـسـيـاسـة / الـطـوائـف</li>
+                    <li><i class="fas fa-id-badge" style="color:var(--text-gold)"></i> ٤- مـمـنـوع طـلـب (رتـبة / كـريـدت)</li>
+                    <li><i class="fas fa-ad" style="color:var(--text-gold)"></i> ٥- عـدم ذكـر أسـمـاء سـيـرفـرات أخـرى</li>
+                    <li><i class="fas fa-robot" style="color:var(--text-gold)"></i> ٦- اسـتـخـدام أوامـر الـبـوتـات بالـمكان الـمخصـص</li>
+                    <li><i class="fas fa-heart-circle-xmark" style="color:var(--text-gold)"></i> ٧- عـدم الـتـلـمـيـح بـالـسـب و الـتـغـازل</li>
+                    <li><i class="fas fa-envelope-open-text" style="color:var(--text-gold)"></i> ٨- عـدم إرسـال روابـط سـيـرفـرات بـالـخـاص</li>
+                    <li><i class="fas fa-headset" style="color:var(--text-gold)"></i> ٩- عـدم إزعـاج الإدارة بـشـؤون جـانـبـيـة</li>
+                    <li><i class="fa-solid fa-shield-halved" style="color:var(--text-gold) !important; display:inline-block !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i> ¹⁰- مـشـاكـل الـخـاص لـيـس لـنـا عـلاقـة بـهـا</li>
+                </ul>
+            </div>
         </div>
+
+        <div id="Map" class="tab-content">
+            <div class="section fade-in">
+                <h2><i class="fas fa-map-marked-alt"></i> خريطة السيرفر</h2>
+                <div class="staff-grid">
+                    <a href="https://discord.com/channels/1331682748372488243/1331959881648967822" target="_blank" class="staff-card"><i class="fas fa-bullhorn" style="font-size:2rem; color:var(--text-gold);"></i><p>أخبار السيرفر</p></a>
+                    <a href="https://discord.com/channels/1331682748372488243/1416180157051572314" target="_blank" class="staff-card"><i class="fas fa-comments" style="font-size:2rem; color:var(--text-gold);"></i><p>الشات العام</p></a>
+                    <a href="https://discord.com/channels/1331682748372488243/1416214568291799163" target="_blank" class="staff-card"><i class="fas fa-gift" style="font-size:2rem; color:var(--text-gold);"></i><p>الفعاليات</p></a>
+                    <a href="https://discord.com/channels/1331682748372488243/1416212884119093269" target="_blank" class="staff-card"><i class="fas fa-lightbulb" style="font-size:2rem; color:var(--text-gold);"></i><p>الاقتراحات</p></a>
+                    <a href="https://discord.com/channels/1331682748372488243/1416213530037846128" target="_blank" class="staff-card"><i class="fas fa-headset" style="font-size:2rem; color:var(--text-gold);"></i><p>الدعم الفني</p></a>
+                    <a href="https://discord.com/channels/1331682748372488243/1416217109696086137" target="_blank" class="staff-card"><i class="fas fa-cubes" style="font-size:2rem; color:var(--text-gold);"></i><p>أخبار ماينكرافت</p></a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="Social" class="tab-content">
+            <div class="section fade-in">
+                <h2><i class="fas fa-share-alt"></i> السوشل ميديا</h2>
+                <div class="social-grid">
+                    <a href="https://discord.gg/WYCBY3W33K" target="_blank" class="soc-btn btn-discord"><i class="fab fa-discord"></i> Server Discord</a>
+                    <a href="https://www.tiktok.com/@l3ei_7" target="_blank" class="soc-btn btn-tiktok"><i class="fab fa-tiktok"></i> TikTok Account</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="Target" class="tab-content">
+            <div class="section fade-in" dir="ltr">
+                <h2 style="direction:rtl;"><i class="fas fa-bullseye"></i> الهدف القادم</h2>
+                <div class="progress-box">
+                    <div style="display:flex; justify-content:space-between; font-weight:bold;"><span>5,800 Members</span><span style="color:var(--text-gold)">10,000 Target</span></div>
+                    <div class="bar-bg"><div class="bar-fill"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function openTab(evt, tabName) {
