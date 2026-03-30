@@ -2,255 +2,300 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝗦𝗧𝗥 𝗖𝗢ММ𝗨ΝΙ𝗧Յ | ستار كميونتي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>STR MODS | مودات ستار</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --bg-main: #07070a;
-            --card-bg: #07070c;
-            --border-color: #2d2d10; /* اللون الزيتي الداكن للحدود */
-            --text-gold: #d4af37;    /* اللون الذهبي الملكي للنصوص */
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-main); color: #fff; line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1050px; margin: auto; padding: 20px; }
-        .banner-wrapper { position: relative; display: flex; justify-content: center; margin-bottom: 75px; }
-        .server-banner { width: 100%; height: 260px; background: url('https://cdn.discordapp.com/banners/1331682748372488243/49d3af0028344ad3f13c6b66bbaf2b40.webp?size=1024') center/cover; border-radius: 20px; border: 1px solid var(--text-gold); }
-        .logo-main { position: absolute; bottom: -55px; width: 120px; height: 120px; border-radius: 50%; border: 4px solid #12151d; background: #12151d; }
-        header { text-align: center; margin-bottom: 35px; }
-        header h1 { font-size: 2.5rem; color: var(--text-gold); margin-bottom: 5px; }
-        .tabs-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 35px; direction: ltr; }
-        .tab-btn { background: #1a1e26; border: 1px solid var(--border-color); color: #999; padding: 10px 18px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.2s; display: flex; align-items: center; gap: 8px; }
-        .tab-btn.active { background: var(--text-gold); color: #000; border-color: var(--text-gold); }
-        .tab-content { display: none; }
-        
-        .tab-content.active { display: block; animation: smoothContentFade 0.5s ease-out forwards; }
-        @keyframes smoothContentFade {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            /* الألوان الملكية المطلوبة */
+            --bg-color: #07070a; 
+            --card-bg: #07070c; 
+            --main-gold: #d4af37; 
+            --border-color: #2d2d10; 
+            --text-gray: #b0b0b0;
+            --gold-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
-        .section { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 25px; padding: 30px; margin-bottom: 25px; }
-        .section h2 { color: var(--text-gold); margin-bottom: 20px; font-size: 1.6rem; display: flex; align-items: center; gap: 12px; }
-        .story-box { background: rgba(255,255,255,0.02); border-right: 4px solid var(--text-gold); padding: 20px; border-radius: 15px; margin-bottom: 30px; }
-        .story-box h3 { color: #fff; margin-bottom: 10px; font-size: 1.3rem; }
-        .story-box p { color: #bbb; font-size: 0.95rem; text-align: justify; line-height: 1.8; }
-        
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
-        .feat-card { background: #0d0f14; border: 1px solid var(--border-color); border-radius: 15px; padding: 25px; text-align: center; transition: 0.3s; }
-        .feat-card:hover { border-color: var(--text-gold); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); }
-        .feat-card i { font-size: 2.2rem; color: var(--text-gold); margin-bottom: 15px; display: block; }
-        
-        .copy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
-        .copy-card { background: #090b0f; border: 1px solid var(--border-color); padding: 18px; border-radius: 15px; text-align: center; cursor: pointer; transition: 0.3s; position: relative; overflow: hidden; }
-        .copy-card:hover { border-color: var(--text-gold); background: #0d0f14; }
-        .copy-card strong { display: block; color: var(--text-gold); font-size: 1.1rem; margin-top: 5px; }
-        
-        .step-box { background: rgba(212, 175, 55, 0.08); padding: 20px; border-radius: 15px; border-right: 4px solid var(--text-gold); margin-bottom: 25px; }
-        .step-box h3 { color: var(--text-gold); font-size: 1.1rem; margin-bottom: 10px; }
-        .step-box p { color: #ccc; font-size: 0.9rem; }
-        .dl-btn { flex: 1; min-width: 220px; text-decoration: none; padding: 16px; border-radius: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; color: #fff; background: #1a1e26; border: 1px solid #333; transition: 0.3s; }
-        .dl-btn:hover { border-color: var(--text-gold); transform: translateY(-3px); box-shadow: 0 5px 10px rgba(212, 175, 55, 0.2); }
-        
-        .rules-list { list-style: none; counter-reset: rule-counter; }
-        .rules-list li { padding: 12px 15px; background: rgba(255,255,255,0.02); margin-bottom: 10px; border-radius: 12px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; }
-        
-        .tab-content.active .rules-list li::after {
-            content: '';
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: 300;
+        }
+
+        /* --- البنر والصورة الشخصية --- */
+        .profile-header {
+            width: 100%;
+            position: relative;
+            margin-bottom: 70px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(rgba(7, 7, 10, 0.4), rgba(7, 7, 10, 0.8)), url('https://cdn.discordapp.com/banners/1331682748372488243/49d3af0028344ad3f13c6b66bbaf2b40.webp?size=1024') no-repeat center center;
+            background-size: cover;
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: var(--gold-shadow);
+        }
+
+        .avatar-container {
             position: absolute;
-            top: 0;
-            right: 0;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            padding: 4px;
+            border: 3px solid var(--main-gold);
+            box-shadow: var(--gold-shadow);
+            z-index: 5;
+        }
+
+        .avatar-container img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent); 
-            animation: ruleGlowLoop 3s infinite linear; 
-            pointer-events: none;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        @keyframes ruleGlowLoop {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+        .container { 
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px 15px;
+            box-sizing: border-box;
         }
 
-        .rules-list li i { font-size: 1.1rem; }
+        h1 { 
+            font-size: 2.2rem; 
+            font-weight: 500;
+            color: var(--main-gold); 
+            text-align: center;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
 
-        .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
-        .staff-card { background: #1a1e26; border: 1px solid var(--border-color); border-radius: 20px; padding: 20px; text-align: center; text-decoration: none; color: white; transition: 0.3s; }
-        .staff-card:hover { border-color: var(--text-gold); transform: translateY(-5px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); }
-        .staff-card img { width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--text-gold); margin-bottom: 12px; object-fit: cover; transition: 0.3s; }
-        .rank { display: inline-block; font-size: 0.75rem; padding: 4px 12px; border-radius: 8px; margin-top: 10px; font-weight: bold; border: 1.5px solid var(--text-gold); color: #fff; background: rgba(212, 175, 55, 0.1); }
-        
-        .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-        .soc-btn { text-decoration: none; padding: 18px; border-radius: 15px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 12px; transition: 0.4s; }
-        .btn-discord { background: #5865F2; color: #fff; }
-        .btn-tiktok { background: #fff; color: #000; }
-        
-        .progress-box { background: #090b0f; padding: 25px; border-radius: 20px; border: 1px solid var(--border-color); }
-        .bar-bg { width: 100%; height: 30px; background: #1a1a24; border-radius: 50px; overflow: hidden; margin: 15px 0; border: 1px solid #333; }
-        .bar-fill { height: 100%; width: 58%; background: var(--text-gold); box-shadow: 0 0 10px var(--text-gold); }
+        /* --- مربع الرسالة الترحيبية --- */
+        .welcome-box {
+            background: rgba(45, 45, 16, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            margin: 0 auto 30px;
+            max-width: 600px;
+        }
+        .welcome-box p {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .welcome-box b { color: var(--main-gold); font-weight: 500; }
 
-        @media (max-width: 768px) {
-            .copy-grid, .social-grid, .features-grid { grid-template-columns: 1fr; }
-            .server-banner { height: 180px; }
+        .search-container { position: relative; max-width: 450px; margin: 0 auto 30px; }
+        #modSearch { 
+            width: 100%; padding: 14px 45px 14px 20px; border-radius: 50px; border: 1px solid var(--border-color); 
+            background: var(--card-bg); color: white; outline: none; box-sizing: border-box; 
+            transition: 0.3s; font-family: inherit; font-weight: 300;
+        }
+        #modSearch:focus { border-color: var(--main-gold); box-shadow: var(--gold-shadow); }
+        .search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--main-gold); }
+
+        /* --- التابس --- */
+        .tabs-header { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            flex-wrap: wrap; 
+            margin-bottom: 30px; 
+        }
+        .tab-btn { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            color: white; 
+            padding: 12px 18px; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            font-size: 0.9rem; 
+            transition: 0.3s; 
+            flex: 1 1 auto;
+            max-width: 150px; 
+            justify-content: center;
+            font-family: inherit;
+        }
+        .tab-btn:hover { border-color: var(--main-gold); box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+        .tab-btn.active { background: var(--main-gold); border-color: var(--main-gold); color: #07070a; font-weight: 500; box-shadow: var(--gold-shadow); }
+
+        /* نظام الشبكة */
+        .tab-content { display: none; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .tab-content.active { display: grid; animation: fadeInOnly 0.4s ease forwards; }
+
+        .mod-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; height: 100%; transition: 0.3s ease; }
+        .mod-card:hover { transform: translateY(-5px); border-color: var(--main-gold); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .mod-image { width: 100%; height: 160px; object-fit: cover; filter: brightness(0.8); transition: 0.3s; }
+        .mod-card:hover .mod-image { filter: brightness(1); }
+        
+        .mod-info { padding: 15px; display: flex; flex-direction: column; flex: 1; }
+        .mod-info h3 { margin: 0 0 10px; font-size: 1.1rem; color: #fff; font-weight: 500; }
+        .mod-info p { color: var(--text-gray); font-size: 0.85rem; line-height: 1.4; flex-grow: 1; margin-bottom: 15px; }
+        
+        .mod-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+        .download-btn { flex: 1; padding: 10px; background: transparent; color: var(--main-gold); text-decoration: none; border-radius: 10px; font-weight: 500; text-align: center; border: 1px solid var(--main-gold); display: flex; align-items: center; justify-content: center; gap: 5px; transition: 0.3s; font-family: inherit; }
+        .download-btn:hover { background: var(--main-gold); color: #07070a !important; }
+        .mod-version { padding: 6px 10px; background: #07070a; border-radius: 8px; font-size: 0.7rem; color: var(--main-gold); border: 1px solid var(--border-color); }
+
+        .hidden { display: none !important; }
+        @keyframes fadeInOnly { from { opacity: 0; } to { opacity: 1; } }
+
+        @media (max-width: 600px) {
+            .tab-content { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 5px; }
+            .banner { height: 160px; }
+            .avatar-container { width: 90px; height: 90px; bottom: -45px; }
+            .mod-image { height: 100px; }
+            .mod-info h3 { font-size: 0.85rem; }
+            .mod-info p { display: none; }
+            .mod-footer { flex-direction: column; }
+            .download-btn { width: 100%; font-size: 0.75rem; }
+            .mod-version { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="banner-wrapper">
-            <div class="server-banner"></div>
-            <img src="https://cdn.discordapp.com/icons/1331682748372488243/27cb0faccfbafe63dd4ea954dcc80513.webp?size=1024" class="logo-main">
-        </div>
-        <header>
-            <h1><i class="fas fa-shield-halved"></i> 𝗦𝗧𝗥 𝗖𝗢ММ𝗨ΝΙ𝗧Y</h1>
-            <p style="color: #888;">أهلاً بك في أفضل سيرفر مغامرات وفعاليات!</p>
-        </header>
-        <div class="tabs-nav">
-            <button class="tab-btn active" onclick="openTab(event, 'About')"><i class="fas fa-info-circle"></i> About</button>
-            <button class="tab-btn" onclick="openTab(event, 'Minecraft')"><i class="fas fa-cube"></i> MineCraft</button>
-            <button class="tab-btn" onclick="openTab(event, 'Rules')"><i class="fas fa-gavel"></i> Rules</button>
-            <button class="tab-btn" onclick="openTab(event, 'Map')"><i class="fas fa-map"></i> Map</button>
-            <button class="tab-btn" onclick="openTab(event, 'Social')"><i class="fas fa-share-nodes"></i> Social</button>
-            <button class="tab-btn" onclick="openTab(event, 'Target')"><i class="fas fa-bullseye"></i> Target</button>
-        </div>
 
-        <div id="About" class="tab-content active">
-            <div class="section fade-in">
-                <h2><i class="fas fa-star"></i> تعريف السيرفر</h2>
-                <div class="story-box">
-                    <h3>القصة والبداية: لسنا مجرد سيرفر، نحن تجربة لا تنكسر!</h3>
-                    <p>تأسس كياننا في عام 2023 برؤية واضحة: بناء مجتمع يجمع الأصدقاء تحت سقف واحد من المتعة والضحك. مررنا بتحديات لم يمر بها غيرنا، واجهنا 3 محاولات اختراق وتخريب، وفي كل مرة كان يظن البعض أنها النهاية، كنا نعود أقوى، أنظم، وأكبر.</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feat-card"><i class="fas fa-comments"></i><h3>Social (Hub)</h3><p>شات متفاعل 24/7، بعيد عن الرسميات وبدون نفسيات.</p></div>
-                    <div class="feat-card"><i class="fas fa-star"></i><h3>Events</h3><p>جدول فعاليات أسبوعي يكسر الروتين بمسابقات وجوائز.</p></div>
-                    <div class="feat-card"><i class="fas fa-cubes"></i><h3>Minecraft</h3><p>بيئة لعب ممتعة (Survival) تركز على التعاون والإبداع.</p></div>
-                    <div class="feat-card"><i class="fas fa-headset"></i><h3>Staff Support</h3><p>طاقم إداري متواجد لخدمتكم، وحل مشاكلكم بأسرع وقت ممكن.</p></div>
-                </div>
-            </div>
+<div class="profile-header">
+    <div class="banner"></div>
+    <div class="avatar-container">
+        <img src="https://cdn.discordapp.com/icons/1331682748372488243/27cb0faccfbafe63dd4ea954dcc80513.webp?size=1024" alt="Madin">
+    </div>
+</div>
 
-            <div class="section fade-in">
-                <h2><i class="fas fa-crown"></i> Server Management</h2>
-                <div class="staff-grid">
-                    <a href="https://discord.com/users/944053364323405914" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/944053364323405914/73bc30883d61ed7bc6a000b9c3ca375d.webp"><h3>Sanji</h3><div class="rank">Owner Ship</div></a>
-                    <a href="https://discord.com/users/1134505693861388338" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1134505693861388338/f4a8d73d777cc5e1faf21d912a23efe0.webp"><h3>Baki</h3><div class="rank">Owner</div></a>
-                    <a href="https://discord.com/users/1190396076222587002" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1190396076222587002/faadabf1a6b0a9dfc7b1dd55ca55b0c9.webp"><h3>Mustafa</h3><div class="rank">Co Owner</div></a>
-                </div>
-                <h2 style="margin-top:30px;"><i class="fas fa-user-shield"></i> Staff Management</h2>
-                <div class="staff-grid">
-                    <a href="https://discord.com/users/1301649715577749556" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1301649715577749556/531ca8e0c8b77f92dcd077ebcc6807e8.webp?size=1024"><h3>Woel</h3><div class="rank">King Ship</div></a>
-                    <a href="https://discord.com/users/984241144462462986" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/attachments/1472347009674383492/1486602745430671492/77c232ad6ffda096a6ce44feec87ac68.gif?ex=69c61a32&is=69c4c8b2&hm=f3b020697dbe662d341047f7896b65e267dd36bdf55fd38dc055ddd1c7079849&"><h3>Madin</h3><div class="rank">Team Leader</div></a>
-                    <a href="https://discord.com/users/839876110794752030" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/839876110794752030/335fe5a47db89676efeb9a4d91ee1296.webp?size=1024"><h3>Svelom</h3><div class="rank">Master</div></a>
-                    <a href="https://discord.com/users/1369783861285752872" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1369783861285752872/8b21c957539ba3464e3d4f88b122c1f1.webp?size=1024"><h3>SZ6V</h3><div class="rank">Admin</div></a>
-                </div>
-                <h2 style="margin-top:40px; color:var(--text-gold);"><i class="fas fa-users-cog"></i> Staff Server</h2>
-                <div class="staff-grid" style="margin-top:20px;">
-                    <a href="https://discord.com/users/1288259374459916318" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1288259374459916318/a_54a526eff4f3e5d4b94b936afe6d71a1.gif"><h3>Skoda</h3><div class="rank">Modtoria</div></a>
-                    <a href="https://discord.com/users/1391811137628143627" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1391811137628143627/8be5f299509bc8ccbf31ae4a6824972e.webp"><h3>Mod</h3><div class="rank">Modtoria</div></a>
-                    <a href="https://discord.com/users/1424789769711255757" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1424789769711255757/a4dd97fb02fda52efa9655fe2e1313c8.webp"><h3>Al3mPain</h3><div class="rank">Modtoria</div></a>
-                    <a href="https://discord.com/users/1224671558161797172" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/1224671558161797172/e4e8eab4153e641ad661d6226bff1651.webp"><h3>FR3</h3><div class="rank">Modtoria</div></a>
-                    <a href="https://discord.com/users/920250376660344842" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/920250376660344842/b8fbbbf8e8941997c5842453f13ebc22.webp"><h3>A7med</h3><div class="rank">Modtoria</div></a>
-                    <a href="https://discord.com/users/998965554914267170" target="_blank" class="staff-card"><img src="https://cdn.discordapp.com/avatars/998965554914267170/143b285a14706c5c1025ac6986559d8c.webp"><h3>Moga</h3><div class="rank">Super Staff</div></a>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <h1>STR <span style="color:white">MODS</span></h1>
 
-        <div id="Minecraft" class="tab-content">
-            <div class="section fade-in">
-                <h2><i class="fas fa-sign-in-alt"></i> الدخول للسيرفر</h2>
-                <div class="copy-grid">
-                    <div class="copy-card" onclick="copyText('Str_Fantasy.aternos.me')"><i class="fas fa-copy"></i> انقر لنسخ IP<strong>Str_Fantasy.aternos.me</strong></div>
-                    <div class="copy-card" onclick="copyText('17325')"><i class="fas fa-hashtag"></i> انقر لنسخ Port<strong>17325</strong></div>
-                </div>
-                <div class="step-box">
-                    <h3><i class="fas fa-gamepad"></i> طريقة الإضافة والدخول</h3>
-                    <p>1. افتح لعبة ماينكرافت واضغط على Play.<br>2. اختر قسم Servers ثم اضغط على Add Server.<br>3. ضع الآي بي والبورت المنسوخين أعلاه ثم اضغط Save ودخول!</p>
-                </div>
-                <h2><i class="fas fa-download"></i> روابط التحميل</h2>
-                <div class="copy-grid">
-                    <a href="https://cdn.discordapp.com/attachments/1439997431524753479/1475885243226656989/minecraft-1-26-0-02-xbox-compressed.apk" target="_blank" class="dl-btn"><i class="fab fa-android"></i> النسخة العادية</a>
-                    <a href="https://www.mediafire.com/file/9dhf6wsg0xmwyfc/Patch_1.26.02_Arm64_32.apk/file" target="_blank" class="dl-btn"><i class="fas fa-tools"></i> نسخة الباتش</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="Rules" class="tab-content">
-            <div class="section fade-in">
-                <h2><i class="fas fa-scroll"></i> قوانين السيرفر</h2>
-                <ul class="rules-list">
-                    <li><i class="fas fa-gavel" style="color:var(--text-gold)"></i> ¹- إحـتـرام الأعـضـاء والإدارة</li>
-                    <li><i class="fas fa-ban" style="color:var(--text-gold)"></i> ²- مـمـنـوع الـسـب و الـشـتـم</li>
-                    <li><i class="fas fa-mosque" style="color:var(--text-gold)"></i> ³- عـدم الـتـحـدث عـن الـسـيـاسـة / الـطـوائـف</li>
-                    <li><i class="fas fa-id-badge" style="color:var(--text-gold)"></i> ٤- مـمـنـوع طـلـب (رتـبة / كـريـدت)</li>
-                    <li><i class="fas fa-ad" style="color:var(--text-gold)"></i> ٥- عـدم ذكـر أسـمـاء سـيـرفـرات أخـرى</li>
-                    <li><i class="fas fa-robot" style="color:var(--text-gold)"></i> ٦- اسـتـخـدام أوامـر الـبـوتـات بالـمكان الـمخصـص</li>
-                    <li><i class="fas fa-heart-circle-xmark" style="color:var(--text-gold)"></i> ٧- عـدم الـتـلـمـيـح بـالـسـب و الـتـغـازل</li>
-                    <li><i class="fas fa-envelope-open-text" style="color:var(--text-gold)"></i> ٨- عـدم إرسـال روابـط سـيـرفـرات بـالـخـاص</li>
-                    <li><i class="fas fa-headset" style="color:var(--text-gold)"></i> ٩- عـدم إزعـاج الإدارة بـشـؤون جـانـبـيـة</li>
-                    <li><i class="fa-solid fa-shield-halved" style="color:var(--text-gold) !important; display:inline-block !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i> ¹⁰- مـشـاكـل الـخـاص لـيـس لـنـا عـلاقـة بـهـا</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="Map" class="tab-content">
-            <div class="section fade-in">
-                <h2><i class="fas fa-map-marked-alt"></i> خريطة السيرفر</h2>
-                <div class="staff-grid">
-                    <a href="https://discord.com/channels/1331682748372488243/1331959881648967822" target="_blank" class="staff-card"><i class="fas fa-bullhorn" style="font-size:2rem; color:var(--text-gold);"></i><p>أخبار السيرفر</p></a>
-                    <a href="https://discord.com/channels/1331682748372488243/1416180157051572314" target="_blank" class="staff-card"><i class="fas fa-comments" style="font-size:2rem; color:var(--text-gold);"></i><p>الشات العام</p></a>
-                    <a href="https://discord.com/channels/1331682748372488243/1416214568291799163" target="_blank" class="staff-card"><i class="fas fa-gift" style="font-size:2rem; color:var(--text-gold);"></i><p>الفعاليات</p></a>
-                    <a href="https://discord.com/channels/1331682748372488243/1416212884119093269" target="_blank" class="staff-card"><i class="fas fa-lightbulb" style="font-size:2rem; color:var(--text-gold);"></i><p>الاقتراحات</p></a>
-                    <a href="https://discord.com/channels/1331682748372488243/1416213530037846128" target="_blank" class="staff-card"><i class="fas fa-headset" style="font-size:2rem; color:var(--text-gold);"></i><p>الدعم الفني</p></a>
-                    <a href="https://discord.com/channels/1331682748372488243/1416217109696086137" target="_blank" class="staff-card"><i class="fas fa-cubes" style="font-size:2rem; color:var(--text-gold);"></i><p>أخبار ماينكرافت</p></a>
-                </div>
-            </div>
-        </div>
-        
-        <div id="Social" class="tab-content">
-            <div class="section fade-in">
-                <h2><i class="fas fa-share-alt"></i> السوشل ميديا</h2>
-                <div class="social-grid">
-                    <a href="https://discord.gg/WYCBY3W33K" target="_blank" class="soc-btn btn-discord"><i class="fab fa-discord"></i> Server Discord</a>
-                    <a href="https://www.tiktok.com/@l3ei_7" target="_blank" class="soc-btn btn-tiktok"><i class="fab fa-tiktok"></i> TikTok Account</a>
-                </div>
-            </div>
-        </div>
-
-        <div id="Target" class="tab-content">
-            <div class="section fade-in" dir="ltr">
-                <h2 style="direction:rtl;"><i class="fas fa-bullseye"></i> الهدف القادم</h2>
-                <div class="progress-box">
-                    <div style="display:flex; justify-content:space-between; font-weight:bold;"><span>5,800 Members</span><span style="color:var(--text-gold)">10,000 Target</span></div>
-                    <div class="bar-bg"><div class="bar-fill"></div></div>
-                </div>
-            </div>
-        </div>
+    <div class="welcome-box">
+        <p>أهلاً بك في <b>موقع مودات ستار</b>، هنا تجد أفضل مودات ماين كرافت الملكية. استمتع بالتصفح والتحميل!</p>
     </div>
 
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            const currentTab = document.getElementById(tabName);
-            currentTab.style.display = "block";
-            setTimeout(() => { currentTab.classList.add("active"); }, 10);
-            evt.currentTarget.classList.add("active");
+    <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="modSearch" placeholder="ابحث عن مود..." onkeyup="filterMods()">
+    </div>
+
+    <div class="tabs-header">
+        <button class="tab-btn active" onclick="openTab(event, 'pvp')"><i class="fas fa-crosshairs"></i> PVP</button>
+        <button class="tab-btn" onclick="openTab(event, 'textures')"><i class="fas fa-paint-brush"></i> Resource</button>
+        <button class="tab-btn" onclick="openTab(event, 'survival')"><i class="fas fa-tree"></i> Survival</button>
+        <button class="tab-btn" onclick="openTab(event, 'java')"><i class="fas fa-shield-alt"></i> Java</button>
+    </div>
+
+    <div id="pvp" class="tab-content active"></div>
+    <div id="textures" class="tab-content"></div>
+    <div id="survival" class="tab-content"></div>
+    <div id="java" class="tab-content"></div>
+</div>
+
+<script>
+    const myMods = [
+        { 
+            id: 'textures', 
+            name: 'نيوب كومبلينتري', 
+            desc: 'جمالية وظلال ومناظر خلابة وجميلة جداً.', 
+            link: 'https://www.mediafire.com/file/88ewfuw3jdlb8lc/Newb+Complementary+REIMAGINED+-+Android.mcpack/file', 
+            version: '1.26+', 
+            image: 'https://i.imgur.com/C1QRBm6.jpeg' 
+        },
+        { 
+            id: 'textures', 
+            name: 'الانميشن الواقعي', 
+            desc: 'انميشن يضيف واقعية وجمالية لحركة اللاعب.', 
+            link: 'https://www.mediafire.com/file/5wd6y59qk8mhmfy/ريسوس+الانميشن.mcpack/file', 
+            version: '1.21+', 
+            image: 'https://i.imgur.com/Gf3hDYf.jpeg' 
+        },
+        { 
+            id: 'survival', 
+            name: 'مود الخريطة', 
+            desc: 'جودة عالية، مُحسّن، إنجازات استكشف العالم الان!', 
+            link: 'https://www.mediafire.com/file/eyqz18q10j9o2kl/EWM+V2.0.1+-+MC+26.3.mcaddon/file', 
+            version: '1.26+', 
+            image: 'https://i.imgur.com/OYhf8Go.png' 
+        },
+        { 
+            id: 'survival', 
+            name: 'فين ماينر', 
+            desc: 'إضافة متطورة لاستخراج العروق وقاطع الأشجار.', 
+            link: 'https://www.mediafire.com/file/iqn6azoy8uqodkz/Ore+++Tree_Vein_Miner+v2+Release.mcpack/file', 
+            version: '1.21+', 
+            image: 'https://i.imgur.com/h8hgkAy.gif' 
+        },
+        { 
+            id: 'survival', 
+            name: 'الأثاث الحديث', 
+            desc: 'إضافة ديكور تضم أكثر من 750 قطعة عصرية.', 
+            link: 'https://www.mediafire.com/file/r28vm52bgcb7af3/Modren+Furniture.mcpack/file', 
+            version: 'all', 
+            image: 'https://i.imgur.com/woeosOr.jpeg' 
+        },
+        { 
+            id: 'survival', 
+            name: 'التحول الى الوحوش', 
+            desc: 'اسوار يسمح للاعبين بالتحول إلى عدة وحوش!', 
+            link: 'https://www.mediafire.com/file/0eta2tts24ucbc1/Morphing+Bracelet.mcaddon/file', 
+            version: '1.26', 
+            image: 'https://i.imgur.com/dnmSQwA.png' 
         }
-        
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert("تم النسخ بنجاح: " + text);
-            });
-        }
-    </script>
+    ];
+
+    function render() {
+        document.querySelectorAll('.tab-content').forEach(c => c.innerHTML = "");
+        myMods.forEach(m => {
+            const container = document.getElementById(m.id);
+            if (container) {
+                container.innerHTML += `
+                    <div class="mod-card">
+                        <img src="${m.image}" class="mod-image">
+                        <div class="mod-info">
+                            <h3>${m.name}</h3>
+                            <p>${m.desc}</p>
+                            <div class="mod-footer">
+                                <a href="${m.link}" target="_blank" class="download-btn">تحميل <i class="fas fa-download"></i></a>
+                                <div class="mod-version">${m.version}</div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+        });
+    }
+
+    function openTab(e, name) {
+        document.querySelectorAll('.tab-content, .tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(name).classList.add('active');
+        e.currentTarget.classList.add('active');
+    }
+
+    function filterMods() {
+        let val = document.getElementById('modSearch').value.toLowerCase();
+        document.querySelectorAll('.mod-card').forEach(card => {
+            let txt = card.innerText.toLowerCase();
+            card.classList.toggle('hidden', !txt.includes(val));
+        });
+    }
+
+    render();
+</script>
 </body>
 </html>
